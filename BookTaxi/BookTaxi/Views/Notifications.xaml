@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" 
+             x:Class="BookTaxi.Views.Notifications">
+    <StackLayout Padding="0" BackgroundColor="White">
+        <StackLayout>
+            <Frame HorizontalOptions="FillAndExpand" HeightRequest="200" BackgroundColor="Transparent" Padding="0" >
+                <Image Source = "theme2" Aspect="AspectFill" Margin="0"/>
+            </Frame>
+        </StackLayout>
+        <FlexLayout HeightRequest="80" FlexLayout.Grow="1" BackgroundColor="Transparent"
+                    
+                    JustifyContent="Start" AlignItems="Center" Margin="20,-200,0,0">
+            <buttons:SfButton  Margin="0,0,0,0"
+                                  ShowIcon="True" 
+                                  HeightRequest="40"
+                                  WidthRequest="40"
+                                  BackgroundColor="White" 
+                                  CornerRadius="20">
+                <buttons:SfButton.Content>
+                    <FlexLayout JustifyContent="Center" AlignItems="Center" BackgroundColor="Transparent">
+                        <Image Source="Back"/>
+                    </FlexLayout>
+                </buttons:SfButton.Content>
+            </buttons:SfButton>
+            <Label Text="Notifications" TextColor="White" FontAttributes="Bold" Margin="20,0,0,0" FlexLayout.Grow="1" FontSize="20" />
+            <buttons:SfButton  Margin="0,0,20,0"
+                                  ShowIcon="True" 
+                                  HeightRequest="40"
+                                  WidthRequest="40"
+                                  HorizontalOptions="End"
+                                  BackgroundColor="Transparent"                                 
+                                  CornerRadius="20">
+                <buttons:SfButton.Content>
+                    <FlexLayout JustifyContent="Center" AlignItems="Center" BackgroundColor="Transparent">
+                        <Image Source="list"/>
+                    </FlexLayout>
+                </buttons:SfButton.Content>
+            </buttons:SfButton>
+        </FlexLayout>
+        <StackLayout Padding="10,100,10,0">
+            <syncfusion:SfListView  BackgroundColor="White"
+                                x:Name="SwipeListView"
+                                SwipeOffset="50"
+                                ItemSize="100"                               
+                                ItemsSource="{Binding DataNotificaiton}"
+                                AllowSwiping="True">
+                <syncfusion:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="0" HeightRequest="100" FlexLayout.Grow="1" BackgroundColor="White" >
+                            <FlexLayout AlignItems="Center" JustifyContent="Start" FlexLayout.Grow="1" BackgroundColor="Transparent" HeightRequest="90" Margin="0,0,40,0">
+                                <yummy:PancakeView BorderColor="Black" CornerRadius="20" HeightRequest="40" BackgroundColor="Transparent"
+                                  WidthRequest="40">
+                                    <yummy:PancakeView.Shadow>
+                                        <yummy:DropShadow Color="Black" BlurRadius="5"/>
+                                    </yummy:PancakeView.Shadow>
+                                    <Frame HorizontalOptions="FillAndExpand" CornerRadius="20" WidthRequest="40" HeightRequest="40" BackgroundColor="{Binding ColorNotification}" Padding="0" >
+                                        <!--<Image Source = "theme2" Aspect="AspectFill" Margin="0"/>-->
+                                        <Image Source="{Binding ImageNotification}" Aspect="AspectFill" Margin="0" />
+                                    </Frame>
+                                </yummy:PancakeView>
+                                <FlexLayout JustifyContent="Center" AlignItems="Start" Direction="Column"  FlexLayout.Grow="1" Padding="5,0,30,0" >
+                                    <Label Text="System" TextColor="Black" FontAttributes="Bold" FontSize="14"/>
+                                    <Label Text="{Binding TextNotificaton}" TextColor="Black" HorizontalTextAlignment="Start"/>
+                                </FlexLayout>
+                            </FlexLayout>
+                            <FlexLayout   AlignContent="Center" JustifyContent="Center" HeightRequest="1" FlexLayout.Grow="1" Padding="0">
+                                <BoxView  BackgroundColor="Gray" WidthRequest="380" />
+                            </FlexLayout>
+                        </StackLayout>
+                </DataTemplate>
+            </syncfusion:SfListView.ItemTemplate>
+        </syncfusion:SfListView>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

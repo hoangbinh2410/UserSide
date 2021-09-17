@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" 
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             x:Class="BookTaxi.Views.OTPBookTaxi">
+    <StackLayout>
+        <Frame HorizontalOptions="FillAndExpand" HeightRequest="420" BackgroundColor="Transparent" Padding="0" >
+            <Image Source = "theme1" Aspect="AspectFill" Margin="0"/>
+        </Frame>
+        <Label Text="Phone Verifficotion" 
+               Margin="0,10,0,10"
+               HorizontalOptions="Center"/>
+        <Label Text="Enter Your OTP Code Below"
+               Margin="0,0,0,5"
+               FontSize="20"
+               HorizontalOptions="Center"
+               FontAttributes="Bold" 
+               TextColor="Black"/>
+        <yummy:PancakeView BackgroundColor="White" CornerRadius="10,10,10,10" HeightRequest="60" Margin="20,20,20,20"  >
+            <yummy:PancakeView.Shadow>
+                <yummy:DropShadow Color="#000000" BlurRadius="10" />
+            </yummy:PancakeView.Shadow>
+            <Grid Padding="-2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.85*" />
+                    <ColumnDefinition Width="0.15*" />
+                    
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackLayout Orientation="Horizontal" Grid.Column="0"
+                                                Grid.Row="0" Margin="0,0,0,0" >
+                    <inputLayout:SfTextInputLayout  HorizontalOptions="FillAndExpand"
+                                                    Margin="15,-50,5,0"
+                                                LeadingViewPosition="Inside" 
+                                                ContainerType="None"
+                                                FocusedColor="Transparent">
+                        <Entry  FontSize="80" CharacterSpacing="10" MaxLength ="4" IsPassword="True"/>
+                    </inputLayout:SfTextInputLayout >
+                </StackLayout>
+                    <!--<inputLayout:SfTextInputLayout                                                            
+                                                LeadingViewPosition="Inside" 
+                                                ContainerType="Outlined"
+                                                FocusedColor="Transparent">
+                    <Entry  FontSize="60" CursorPosition="4" IsPassword="True"/>
+                </inputLayout:SfTextInputLayout >-->
+                <StackLayout Grid.Column="1"
+                             Margin="0,0,0,0"                           
+                             Grid.Row="0" HorizontalOptions="Center" >
+                    <buttons:SfButton  Margin="0,5,10,0"
+                                  ShowIcon="True" 
+                                  HeightRequest="50"
+                                  WidthRequest="50"
+                                  BackgroundColor="Gray" 
+                                  CornerRadius="25" >
+                        <buttons:SfButton.Content>
+                            <FlexLayout JustifyContent="Center" AlignItems="Center">
+                                <Image Source="done"/>
+                            </FlexLayout>
+                        </buttons:SfButton.Content>
+                    </buttons:SfButton>
+                </StackLayout>
+                
+            </Grid>
+        </yummy:PancakeView>
+        <Label Text="ReSend Code 10 second" 
+               HorizontalTextAlignment="Center"
+               Margin="20,0,20,0"
+               FontSize="12"/>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:sfavatar="clr-namespace:Syncfusion.XForms.AvatarView;assembly=Syncfusion.Core.XForms"
+             x:Class="BookTaxi.Views.BookTaxiLanguage">
+    <StackLayout>
+        <syncfusion:SfListView  BackgroundColor="Transparent"
+                                x:Name="SwipeListView"
+                                SwipeOffset="50"
+                                ItemSize="50"
+                                SelectedItem="{Binding SelectedName}"
+                                ItemTapped="SwipeListView_ItemTapped"
+                                ItemsSource="{Binding languages}"
+                                AllowSwiping="True">
+            <syncfusion:SfListView.HeaderTemplate>
+                <DataTemplate>
+                    <Grid BackgroundColor="Transparent">
+                        <Label LineBreakMode="NoWrap"
+                    Margin="10,0,0,0" Text="Choose language" FontAttributes="Bold"
+                    FontSize="20" TextColor="Black" HorizontalOptions="Start" />
+                    </Grid>
+                </DataTemplate>
+            </syncfusion:SfListView.HeaderTemplate>
+            <syncfusion:SfListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Label Text="{Binding Language}" FontSize="16"
+                               HorizontalOptions="Start"
+                               Grid.Row="0" 
+                                Grid.Column="0"/>
+                        <Image Source="done" IsVisible="{Binding IHideImage}" 
+                               BackgroundColor="Transparent"
+                                Grid.Column="1"
+                                HorizontalOptions="End"
+                                Grid.Row="0"/>
+                    </Grid>
+                </DataTemplate>
+            </syncfusion:SfListView.ItemTemplate>
+        </syncfusion:SfListView>
+    </StackLayout>
+</ContentPage>

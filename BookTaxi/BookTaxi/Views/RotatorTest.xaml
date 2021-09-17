@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:local1="clr-namespace:BookTaxi.ViewModels"
+             xmlns:local="clr-namespace:BookTaxi"
+             xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfRotator.XForms;assembly=Syncfusion.SfRotator.XForms"
+             x:Class="BookTaxi.Views.RotatorTest">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Label Text="12313"/>
+            </StackLayout>
+            <maps:Map x:Name="map" IsShowingUser="True"></maps:Map>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:local="clr-namespace:BookTaxi"
+             prism:ViewModelLocator.AutowireViewModel="True" 
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=netstandard" 
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             x:Class="BookTaxi.Views.LoginBookTaxi">
+    <StackLayout>
+        <Frame HorizontalOptions="FillAndExpand" HeightRequest="420" BackgroundColor="Transparent" Padding="0" >
+            <Image Source = "theme1" Aspect="AspectFill" Margin="0"/>
+        </Frame>
+        <Label Text="Hello, Nice to meet you!" 
+               Margin="0,10,0,10"
+               HorizontalOptions="Center"/>
+        <Label Text="Get Moving With Book Taxi"
+               Margin="0,0,0,5"
+               FontSize="20"
+               HorizontalOptions="Center"
+               FontAttributes="Bold" 
+               TextColor="Black"/>
+        <yummy:PancakeView BackgroundColor="White" CornerRadius="10,10,10,10" HeightRequest="60" Margin="20,20,20,20"  >
+            <yummy:PancakeView.Shadow>
+                <yummy:DropShadow Color="#000000" BlurRadius="10" />
+            </yummy:PancakeView.Shadow>
+            <Grid Padding="-2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition Width="1" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <inputLayout:SfTextInputLayout Grid.Column="0" Margin="5,-10,0,10"
+                                               Grid.Row="0"                                                                                             
+                                               LeadingViewPosition="Inside"                                                
+                                                ContainerType="Outlined"
+                                                FocusedColor="Transparent">
+                    <combobox:SfComboBox TextSize="20"
+                                         x:Name="comboBoxDepartment" 
+                                         IsEditableMode="False"
+                                         DataSource="{Binding PhoneCollection}"                                                                                
+                                         DisplayMemberPath="NumberPhone">
+                    </combobox:SfComboBox>
+                    <inputLayout:SfTextInputLayout.LeadingView>
+                        <Image Source="my" />
+                    </inputLayout:SfTextInputLayout.LeadingView>
+                </inputLayout:SfTextInputLayout>
+                <FlexLayout Grid.Column="1" Grid.Row="0" AlignContent="Center" JustifyContent="Center" Margin="0,15,0,0">
+                    <BoxView  BackgroundColor="Black" HeightRequest="40" />
+                </FlexLayout>
+                
+                <!--<inputLayout:SfTextInputLayout Grid.Column="2" 
+                                               Grid.Row="0"
+                                                LeadingViewPosition="Inside" 
+                                                ContainerType="Outlined"
+                                                FocusedColor="Transparent">
+                    <Entry  FontSize="20"/>
+                </inputLayout:SfTextInputLayout>-->
+                <local:CustomEntry FontSize="20" Margin="0,0,0,0"  Grid.Column="2" 
+                                               Grid.Row="0"/>
+            </Grid>
+        </yummy:PancakeView>
+        <Label Text="By creating on account,you agree to our team of Service and Primary policy" 
+               HorizontalTextAlignment="Center"
+               Margin="20,0,20,0"
+               FontSize="12"/>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="BookTaxi.Views.LocationBookTaxi">
+
+    <FlexLayout Padding="10,10,10,10" HorizontalOptions="Center" Direction="Column">
+        <Image Source="location" Margin="20,60,20,0"/>
+        <Label Text="TURN ON YOUR LOCATION"
+               FontAttributes="Bold" 
+               HorizontalTextAlignment="Center"
+               Margin="0,30,0,10"
+               TextColor="Black"
+               FontSize="20"/>
+        <Label Text="To continutes, let your turn on location, using Google's location service"
+               HorizontalTextAlignment="Center"
+               Margin="0,20,0,20"
+               FontSize="18"/>
+        <Button Text="YES,TURN IT ON"
+                BackgroundColor="Green"
+                FontAttributes="Bold" 
+                TextColor="White"
+                Margin="0,20,0,20"
+                CornerRadius="40"/>
+        <Button Text="CANCEL"
+                Margin="0,20,0,20"
+                TextColor="Black"
+                BackgroundColor="Transparent"/>
+    </FlexLayout>
+</ContentPage>

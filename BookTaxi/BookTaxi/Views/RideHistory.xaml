@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" 
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             x:Class="BookTaxi.Views.RideHistory">
+    <StackLayout Padding="0" BackgroundColor="White">
+        <!--theme-->
+        <StackLayout>
+            <Frame HorizontalOptions="FillAndExpand" HeightRequest="420" BackgroundColor="Transparent" Padding="0" >
+                <Image Source = "theme2" Aspect="AspectFill" Margin="0"/>
+            </Frame>
+        </StackLayout>
+        <!--Bnt Back-->
+        <FlexLayout HeightRequest="80" FlexLayout.Grow="1" BackgroundColor="Transparent"
+                    JustifyContent="Start" AlignItems="Center" Margin="20,-370,0,0">
+            <buttons:SfButton  Margin="0,5,5,0"
+                                  ShowIcon="True" 
+                                  HeightRequest="40"
+                                  WidthRequest="40"
+                                  BackgroundColor="White" 
+                                  CornerRadius="20">
+                <buttons:SfButton.Content>
+                    <FlexLayout JustifyContent="Center" AlignItems="Center" BackgroundColor="Transparent">
+                        <Image Source="Back"/>
+                    </FlexLayout>
+                </buttons:SfButton.Content>
+            </buttons:SfButton>
+            <FlexLayout FlexLayout.Grow="1" HeightRequest="80" 
+                        Margin="20,0,0,0" Direction="Column" AlignContent="Start" JustifyContent="Center" >
+                <Label Text="Your Per" TextColor="White" FontSize="12"></Label>
+                <Label Text="Ride History" TextColor="White"  FontSize="20" FontAttributes="Bold"></Label>
+            </FlexLayout>
+        </FlexLayout>
+        <StackLayout Margin="20,100,20,0">
+            <syncfusion:SfListView BackgroundColor="Transparent"
+                                x:Name="SwipeListView"
+                                SwipeOffset="50"
+                                ItemSize="250"                               
+                                ItemsSource="{Binding DataHistoryRide}"
+                                AllowSwiping="True">
+                <syncfusion:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="0" HeightRequest="240" FlexLayout.Grow="1" BackgroundColor="Transparent" >
+                            <yummy:PancakeView BorderColor="Black" FlexLayout.Grow="1" CornerRadius="20" HeightRequest="220" Margin="5,0,5,0     " BackgroundColor="White"
+                                 >
+                                <yummy:PancakeView.Shadow>
+                                    <yummy:DropShadow Color="Black"/>
+                                </yummy:PancakeView.Shadow>
+                                <StackLayout FlexLayout.Grow="1" BackgroundColor="White">
+                                    <FlexLayout  Margin="10,10,10,0" FlexLayout.Grow="1"  HeightRequest="150" BackgroundColor="Transparent">
+                                        <FlexLayout  Direction="Column" JustifyContent="SpaceAround" AlignItems="Center" HeightRequest="100" WidthRequest="20" BackgroundColor="Transparent" Margin="0,0,0,0">
+
+                                            <BoxView HeightRequest="8" WidthRequest="8" CornerRadius="4" BackgroundColor="Green">
+                                            </BoxView>
+                                            <BoxView HeightRequest="3" WidthRequest="3" CornerRadius="1.5" BackgroundColor="Green">
+                                            </BoxView>
+                                            <BoxView HeightRequest="3" WidthRequest="3" CornerRadius="1.5" BackgroundColor="Green">
+                                            </BoxView>
+                                            <BoxView HeightRequest="3" WidthRequest="3" CornerRadius="1.5" BackgroundColor="Green">
+                                            </BoxView>
+                                            <BoxView HeightRequest="3" WidthRequest="3" CornerRadius="1.5" BackgroundColor="Green">
+                                            </BoxView>
+                                            <BoxView HeightRequest="3" WidthRequest="3" CornerRadius="1.5" BackgroundColor="Green">
+                                            </BoxView>
+                                            <BoxView HeightRequest="8" WidthRequest="8" CornerRadius="4" BackgroundColor="Green">
+                                            </BoxView>
+                                        </FlexLayout >
+                                        <FlexLayout FlexLayout.Grow="1" Direction="Column"  AlignItems="Start" HeightRequest="140" BackgroundColor="Transparent" Margin="10,0,0,0">
+                                            <Label Text="From: Harlem Stress 123, Manhattan" FontSize="12"/>
+                                            <Label Text="{Binding FromAdress}" TextColor="Black" FontAttributes="Bold" FontSize="16"/>
+                                            <BoxView  BackgroundColor="Gray" WidthRequest="320" HeightRequest="1" Margin="0,15,0,30"/>
+                                            <Label Text="To:Harlem, Manhattan" FontSize="12" />
+                                            <Label Text="{Binding ToAdress}" TextColor="Black" FontAttributes="Bold" FontSize="16"/>
+                                        </FlexLayout>
+                                    </FlexLayout>
+                                    <FlexLayout   AlignContent="Center" JustifyContent="Center" HeightRequest="1" FlexLayout.Grow="1" >
+                                        <BoxView  BackgroundColor="Gray" WidthRequest="340" />
+                                    </FlexLayout>
+                                    <FlexLayout FlexLayout.Grow="1" HeightRequest="20" Direction="Row" JustifyContent="SpaceBetween" Padding="5,0,5,0" >
+                                        <Label Text="ID: 761435654234" FontSize="12"/>
+                                        <Label Text="6:30 AM" FontSize="12"/>
+                                    </FlexLayout>
+                                </StackLayout>
+                            </yummy:PancakeView>
+                        </StackLayout>
+                    </DataTemplate>
+                </syncfusion:SfListView.ItemTemplate>
+            </syncfusion:SfListView>
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>
