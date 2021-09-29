@@ -44,8 +44,12 @@ namespace BookTaxi.ViewModels
             set { SetProperty(ref _textrotator2, value); }
         }
         //public ObservableCollection<Type> RotatorPages { get; set; }
+        public Command ClickStarted { get; }
+        private readonly INavigationService _navigationService;
         public RotatorMainPageViewModel(INavigationService navigationService) : base(navigationService)
         {
+            _navigationService = navigationService;
+            ClickStarted = new Command(Started);
             RotatorCollection = new List<ViewRotator>()
             {
                 new ViewRotator {ImgageRotator ="taxi2", TextRotator="Request Rider", NameBtn="SKIP", TextRotator2="Request a ride get picked up by a nearby community dỉver", ColorBtn="Transparent", TextColer="Yellow"},
@@ -53,7 +57,10 @@ namespace BookTaxi.ViewModels
                 new ViewRotator {ImgageRotator="taxi", TextRotator="Track Your Ride", NameBtn="GET STARTED", TextRotator2="Know your driver in advance and ba oble to view curenl location", ColorBtn="Green",TextColer="White"}
             };
          }
-        
+        public async void Started()
+        {
+            await _navigationService.NavigateAsync("LoginBookTaxi");
+        }       
     }
 
 }

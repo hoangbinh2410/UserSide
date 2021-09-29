@@ -20,17 +20,23 @@
                               BackgroundColor="Transparent">
             <syncfusion:SfRotator.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout  Padding="25,20,25,30" HorizontalOptions="Center" >
+                    <StackLayout  Padding="25,20,25,50" HorizontalOptions="Center" >
                         <Image Source="{Binding ImgageRotator}"/>
                         <Label HorizontalOptions="Center"
+                               Margin="0,20,0,0"
                                Text="{Binding TextRotator}" 
                                TextColor="Black" 
                                FontAttributes="Bold" 
                                FontSize="20"/>
-                        <Label HorizontalTextAlignment="Center" 
+                        <Label HorizontalTextAlignment="Center"
+                               Margin="20,5,20,0"
                                Text="{Binding TextRotator2}" 
                                FontSize="18"/>
-                        <Button FontAttributes="Bold" CornerRadius="50" BackgroundColor="{Binding ColorBtn}" Text="{Binding NameBtn}" Margin="0,25,0,15" TextColor="{Binding TextColer}"/>
+                        <Button FontAttributes="Bold" CornerRadius="50" 
+                                BackgroundColor="{Binding ColorBtn}" 
+                                Text="{Binding NameBtn}" Margin="0,40,0,15" 
+                                TextColor="{Binding TextColer}" 
+                                Command="{Binding ClickStarted}"/>
                     </StackLayout>
                 </DataTemplate>
             </syncfusion:SfRotator.ItemTemplate>

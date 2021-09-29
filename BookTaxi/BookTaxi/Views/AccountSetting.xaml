@@ -4,13 +4,20 @@
              xmlns:local="clr-namespace:BookTaxi"
              xmlns:prism="http://prismlibrary.com"
              xmlns:controls="clr-namespace:BookTaxi.Model"
+             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" 
              prism:ViewModelLocator.AutowireViewModel="True"
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
              xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
              x:Class="BookTaxi.Views.AccountSetting">
+    
     <StackLayout Padding="0" BackgroundColor="White">
+        <busyindicator:SfBusyIndicator x:Name="busyindicator" 
+                                       AnimationType="Battery" 
+                                       ViewBoxWidth = "150" 
+                                       ViewBoxHeight="150" 
+                                       TextColor="Maroon" />
         <!--theme-->
         <StackLayout>
             <Frame HorizontalOptions="FillAndExpand" HeightRequest="420" BackgroundColor="Transparent" Padding="0" >
@@ -50,7 +57,7 @@
         <StackLayout  Margin="10,0,0,0"  HeightRequest="80" HorizontalOptions="FillAndExpand">
             <Label Text="Edit Profile" FontAttributes="Bold" FontSize="20" TextColor="Black"/>
             <FlexLayout  HeightRequest="40" JustifyContent="Start" AlignItems="Center" FlexLayout.Grow="1">
-                <controls:IconView Source="user" Margin="0,25,0,0" Foreground="Green"/>
+                <controls:IconView Source="user" Margin="0,25,0,0" Foreground="DarkBlue"/>
                 <FlexLayout Direction="Column" HeightRequest="60"  FlexLayout.Grow="1" JustifyContent="Center" Margin="10,0,0,0"  >
                     <Label Text="Name" FontSize="12" FlexLayout.Grow="1" Margin="0,17,0,0"/>
                     <local:CustomEntry Text="demo@gmail.com" 
@@ -87,7 +94,7 @@
         <!--Email-->
         <StackLayout  Margin="10,0,0,0"  HeightRequest="60" HorizontalOptions="FillAndExpand">
             <FlexLayout  HeightRequest="40" JustifyContent="Start" AlignItems="Center" FlexLayout.Grow="1">
-                <controls:IconView  Source="email" Margin="0,25,0,0" Foreground="Green"/>
+                <controls:IconView  Source="email" Margin="0,25,0,0" Foreground="DarkBlue"/>
                 <FlexLayout Direction="Column" HeightRequest="60"  FlexLayout.Grow="1" JustifyContent="Center" Margin="10,0,0,0" >
                     <Label Text="Email ID" FontSize="12" FlexLayout.Grow="1" Margin="0,17,0,0"/>
                     <local:CustomEntry Text="demo@gmail.com" TextColor="Black"
@@ -121,7 +128,7 @@
         <!--Passs-->
         <StackLayout  Margin="10,0,0,0"  HeightRequest="60" HorizontalOptions="FillAndExpand">
             <FlexLayout  HeightRequest="40" JustifyContent="Start" AlignItems="Center" FlexLayout.Grow="1">
-                <controls:IconView Source="password" Margin="0,22,0,0" Foreground="Green"/>
+                <controls:IconView Source="password" Margin="0,22,0,0" Foreground="DarkBlue"/>
                 <FlexLayout Direction="Column" HeightRequest="60"  FlexLayout.Grow="1" JustifyContent="Center" Margin="10,0,0,0" >
                     <Label Text="Password" FontSize="12" FlexLayout.Grow="1" Margin="0,17,0,0"/>
                     <local:CustomEntry Text="demo@gmail.com" TextColor="Black"
@@ -157,7 +164,7 @@
         <StackLayout  Margin="10,0,0,0"  HeightRequest="60" HorizontalOptions="FillAndExpand">
             <Label Text="Favourite Places" FontAttributes="Bold"  FontSize="20"  TextColor="Black"/>
             <FlexLayout  HeightRequest="40" JustifyContent="Start" AlignItems="Center" FlexLayout.Grow="1">
-                <controls:IconView Source="home" Margin="0,25,0,0" Foreground="Green"/>
+                <controls:IconView Source="home" Margin="0,25,0,0" Foreground="DarkBlue"/>
                 <FlexLayout Direction="Column" HeightRequest="60"  FlexLayout.Grow="1" JustifyContent="Center" Margin="10,0,0,0" >
                     <Label Text="Home" FontSize="12" FlexLayout.Grow="1" Margin="0,17,0,0"/>
                     <local:CustomEntry Text="New York" TextColor="Black"

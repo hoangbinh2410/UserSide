@@ -37,6 +37,7 @@ com.google.android.material.tabs.TabLayout;D:\Demo\UserSide\BookTaxi\BookTaxi.An
 com.google.android.material.tabs.TabLayout;D:\Demo\UserSide\BookTaxi\BookTaxi.Android\obj\Debug\100\lp\55\jl\res\layout\rootlayout.xml
 com.google.android.material.tabs.TabLayout;D:\Demo\UserSide\BookTaxi\BookTaxi.Android\obj\Debug\100\lp\55\jl\res\layout\tabbar.xml
 com.google.android.material.tabs.TabLayout;obj\Debug\100\res\layout\tabbar.xml
+crc64720bb2db43a66fe9.FormsViewPager;D:\Demo\UserSide\BookTaxi\BookTaxi.Android\obj\Debug\100\lp\55\jl\res\layout\rootlayout.xml
 declare-styleable;D:\Demo\UserSide\BookTaxi\BookTaxi.Android\obj\Debug\100\lp\2\jl\res\values\attrs.xml
 declare-styleable;D:\Demo\UserSide\BookTaxi\BookTaxi.Android\obj\Debug\100\lp\55\jl\res\values\attrs.xml
 declare-styleable;D:\Demo\UserSide\BookTaxi\BookTaxi.Android\obj\Debug\100\lp\6\jl\res\values\attrs.xml

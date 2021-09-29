@@ -10,15 +10,22 @@
              xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
              x:Class="BookTaxi.Views.LoginBookTaxi">
     <StackLayout>
-        <Frame HorizontalOptions="FillAndExpand" HeightRequest="420" BackgroundColor="Transparent" Padding="0" >
-            <Image Source = "theme1" Aspect="AspectFill" Margin="0"/>
+        <Frame HorizontalOptions="FillAndExpand" HeightRequest="420" BackgroundColor="Transparent" Padding="0">
+            <Image Source = "theme1" Aspect="AspectFill" Margin="0">
+                <Image.GestureRecognizers >
+                    <TapGestureRecognizer Command="{Binding ClikedImage}" >
+                    </TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
         </Frame>
         <Label Text="Hello, Nice to meet you!" 
                Margin="0,10,0,10"
+               TextColor="Black"
                HorizontalOptions="Center"/>
         <Label Text="Get Moving With Book Taxi"
-               Margin="0,0,0,5"
-               FontSize="20"
+              
+               FontSize="25"
+               Margin="0,0,0,10"
                HorizontalOptions="Center"
                FontAttributes="Bold" 
                TextColor="Black"/>
@@ -44,10 +51,10 @@
                                          x:Name="comboBoxDepartment" 
                                          IsEditableMode="False"
                                          DataSource="{Binding PhoneCollection}"                                                                                
-                                         DisplayMemberPath="NumberPhone">
+                                         DisplayMemberPath="NumberPhone" >
                     </combobox:SfComboBox>
                     <inputLayout:SfTextInputLayout.LeadingView>
-                        <Image Source="my" />
+                        <Image Source="flag" />
                     </inputLayout:SfTextInputLayout.LeadingView>
                 </inputLayout:SfTextInputLayout>
                 <FlexLayout Grid.Column="1" Grid.Row="0" AlignContent="Center" JustifyContent="Center" Margin="0,15,0,0">
@@ -67,7 +74,7 @@
         </yummy:PancakeView>
         <Label Text="By creating on account,you agree to our team of Service and Primary policy" 
                HorizontalTextAlignment="Center"
-               Margin="20,0,20,0"
+               Margin="80,10,80,0"
                FontSize="12"/>
     </StackLayout>
 </ContentPage>

@@ -9,6 +9,7 @@
              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" 
              xmlns:controls="clr-namespace:BookTaxi.Model"
+             xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
              xmlns:navigationdrawer="clr-namespace:Syncfusion.SfNavigationDrawer.XForms;assembly=Syncfusion.SfNavigationDrawer.XForms"
              x:Class="BookTaxi.Views.DrawerBookTaxi">
     <!--Xét chiều cao của drawer-->
@@ -44,10 +45,22 @@
                         </buttons:SfButton.Content>
                     </buttons:SfButton>
                     <Frame HeightRequest="50" WidthRequest="50" CornerRadius="25" BackgroundColor="Black" Padding="0" Margin="0,5,0,5">
-                        <Image Source="avatar" Aspect="AspectFill"  Margin="0" />
+                        <Image Source="avatar" Aspect="AspectFill"  Margin="0">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ClickedImage }">
+                                    
+                                </TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
                     </Frame>
                     <FlexLayout  Direction="Column" AlignItems="Start"  JustifyContent="Center">
-                        <Label Text="Stark" TextColor="#3db24b" FontAttributes="Bold" />
+                        <Label Text="Stark" TextColor="#3db24b" FontAttributes="Bold">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding ClickedLabel}">
+                                    
+                                </TapGestureRecognizer>
+                            </Label.GestureRecognizers>
+                        </Label>
                         <Label Text="Choose the type of taxi" TextColor="Black" FontSize="22" FontAttributes="Bold"/>
                     </FlexLayout>
                 </StackLayout>
@@ -70,6 +83,11 @@
                                 <FlexLayout  Margin="10,10,10,0" FlexLayout.Grow="1"  HeightRequest="150" BackgroundColor="White">
                                     <FlexLayout  Direction="Column" JustifyContent="SpaceAround" AlignItems="Center" HeightRequest="100" WidthRequest="20" BackgroundColor="Transparent" Margin="0,0,0,0">
                                         <BoxView HeightRequest="8" WidthRequest="8" CornerRadius="4" BackgroundColor="#3db24b">
+                                            <BoxView.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding ClickedBoxview}">
+                                                    
+                                                </TapGestureRecognizer>
+                                            </BoxView.GestureRecognizers>
                                         </BoxView>
                                         <BoxView HeightRequest="3" WidthRequest="3" CornerRadius="1.5" BackgroundColor="#3db24b">
                                         </BoxView>
@@ -91,7 +109,13 @@
                                         <BoxView  BackgroundColor="Gray" WidthRequest="320" HeightRequest="1" Margin="0,5,0,15"/>
                                         <Label Text="To:Harlem, Manhattan" FontSize="12" />
                                         <!--<Label Text="23213" TextColor="Black" FontAttributes="Bold" FontSize="16"/>-->
-                                        <local:CustomEntry Margin="0,0,0,0" Text="New York" TextColor="Black" FontAttributes="Bold" FontSize="16" WidthRequest="150"/>
+                                        <local:CustomEntry Margin="0,0,0,0" Text="New York" TextColor="Black" FontAttributes="Bold" FontSize="16" WidthRequest="150">
+                                            <local:CustomEntry.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding ClickedEntry}">
+                                                    
+                                                </TapGestureRecognizer>
+                                            </local:CustomEntry.GestureRecognizers>
+                                        </local:CustomEntry>
                                     </FlexLayout>
                                 </FlexLayout>
                             </StackLayout>
@@ -99,35 +123,34 @@
                     </StackLayout>
                     <!--Bảng chọn xe-->
                     <StackLayout BackgroundColor="Transparent" Margin="10,310,10,0">
-                        <yummy:PancakeView HeightRequest="360" CornerRadius="20,20,0,0" BackgroundColor="White" >
+                        <yummy:PancakeView HeightRequest="380" CornerRadius="20,20,0,0" BackgroundColor="White" >
                             <yummy:PancakeView.Shadow>
                                 <yummy:DropShadow Color="Black"/>
                             </yummy:PancakeView.Shadow>
                             <Grid BackgroundColor="Transparent" >
                                 <Grid.ColumnDefinitions>
-                                    <!--<ColumnDefinition Width="80" />-->
-                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="0.1*" />
+                                    <RowDefinition Height="0.15*" />
                                     <RowDefinition Height="0.35*" />
                                     <RowDefinition Height="0.1*" />
-                                    <RowDefinition Height="0.2*" />
+                                    <RowDefinition Height="0.175*" />
                                     <RowDefinition Height="0.05*" />
-                                    <RowDefinition Height="0.2*" />
+                                    <RowDefinition Height="0.175*" />
                                 </Grid.RowDefinitions>
-                                <StackLayout  Margin="0,10,0,10"
+                                <StackLayout  Margin="0,30,0,10"
                                               Grid.Row="0" 
                                               BackgroundColor="Transparent"
                                               Grid.Column="0">
-                                    <Label Text="Request Rider" TextColor="Black" FontAttributes="Bold" Margin="20,0,0,0"/>
+                                    <Label Text="Request Rider" FontSize="18" TextColor="Black" FontAttributes="Bold" Margin="20,0,0,0"/>
                                 </StackLayout>
                                   <Grid        Grid.Row="1" 
                                                Margin="0,0,0,10"
                                                BackgroundColor="Transparent"
                                                FlexLayout.Grow="1"
                                                Grid.Column="0">
-                                    <yummy:PancakeView Margin="10,0,10,0" VerticalOptions="Fill" BackgroundColor="#d6d6d7" CornerRadius="20,20,20,20">
+                                    <yummy:PancakeView Margin="20,10,20,0" VerticalOptions="Fill" BackgroundColor="#d6d6d7" CornerRadius="20,20,20,20">
                                         <yummy:PancakeView.Shadow>
                                             <yummy:DropShadow Color="Black"/>
                                         </yummy:PancakeView.Shadow>
@@ -138,19 +161,22 @@
                                                 <ColumnDefinition Width="0,7*" />
                                             </Grid.ColumnDefinitions>
                                             <Grid.RowDefinitions>
-                                                <RowDefinition Height="1*" />
+                                                <RowDefinition Height="*" />
                                             </Grid.RowDefinitions>
                                             <StackLayout Margin="20,0,0,0" 
                                                          Grid.Column="0" 
                                                          Grid.Row="0">
-                                                <Label Text="Price" FontAttributes="Bold"/>
-                                                <Label Text="$48,6"/>
-                                                <Label Text="3Min"/>
+                                                <Label Text="Price" FontAttributes="Bold" TextColor="Black" Margin="0,20,0,0" VerticalOptions="Center"/>
+                                                <Label Text="$48,6" Margin="0,-5,0,0"/>
+                                                <Label Text="3MIN" Margin="0,-5,0,0"/>
                                             </StackLayout>
-                                            <Frame Grid.Column="1" BackgroundColor="Transparent"
-                                                   Grid.Row="0">
-                                                <Image Source="taxicar2" BackgroundColor="Transparent"/>
-                                            </Frame>
+                                            <StackLayout Grid.Column="1" BackgroundColor="Transparent" Margin="0"
+                                                   Grid.Row="0"  Padding="0">
+                                                <Frame  Margin="10,0,30,40" Padding="0" BackgroundColor="Transparent">
+                                                    <Image Source="taxicar2" BackgroundColor="Transparent" Aspect="AspectFill"  Margin="0" />
+                                                </Frame>
+                                               
+                                            </StackLayout>
                                         </Grid>
                                     </yummy:PancakeView>
                                 </Grid>
@@ -158,7 +184,7 @@
                                               BackgroundColor="Transparent"                                              
                                               Grid.Row="2" 
                                               Grid.Column="0">
-                                    <Label Text="Promo Code" TextColor="Black" FontAttributes="Bold" Margin="20,0,0,0"/>
+                                    <Label Text="Promo Code" FontSize="18" TextColor="Black" FontAttributes="Bold" Margin="20,0,0,0"/>
                                 </StackLayout>
                                 <!--Chọn mã giảm giá-->
                                 <StackLayout  BackgroundColor="Transparent"                                             
@@ -167,34 +193,28 @@
                                     <Grid>
                                         <Grid.ColumnDefinitions>
                                            
-                                            <ColumnDefinition Width="0.8*" />
-                                            <ColumnDefinition Width="0.2*" />
+                                            <ColumnDefinition Width="0.75*" />
+                                            <ColumnDefinition Width="0.25*" />
                                         </Grid.ColumnDefinitions>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="*" />
                                         </Grid.RowDefinitions>
-
-                                        <yummy:PancakeView BorderColor="Black" 
-                                                           CornerRadius="25" 
-                                                           HeightRequest="70"
-                                                           Margin="30,0,20,0" 
+                                        <yummy:PancakeView BorderColor="White" 
+                                                           CornerRadius="10" 
+                                                           HeightRequest="110"
+                                                           Margin="20,0,20,0" 
                                                            WidthRequest="50" 
                                                            Grid.Row="0" 
                                                            Grid.Column="0">
                                             <yummy:PancakeView.Shadow>
                                                 <yummy:DropShadow Color="Black"/>
                                             </yummy:PancakeView.Shadow>
-                                            <buttons:SfButton FlexLayout.Grow="1"                  
-                                                              ShowIcon="True"                                                                      
-                                                              Margin="0" 
-                                                              BackgroundColor="White">
-                                                <buttons:SfButton.Content>
-                                                    <FlexLayout AlignItems="Center" Margin="20,0,20,0">
-                                                        <Image Source="payment"/>
-                                                        <Label Margin="20,0,0,0" Text="Input Promo Code" TextColor="Black" FontAttributes="Bold"/>
-                                                    </FlexLayout>
-                                                </buttons:SfButton.Content>
-                                            </buttons:SfButton>
+                                            <FlexLayout AlignItems="Center" Margin="0" FlexLayout.Grow="1" BackgroundColor="White">
+                                                <Frame HeightRequest="30" WidthRequest="30" Padding="0" Margin="10,10,10,10" BackgroundColor="Transparent">
+                                                    <Image Source="payment"  Aspect="AspectFill"  Margin="0"/>
+                                                </Frame>
+                                                <Label Margin="20,0,0,0" Text="Input Promo Code"  TextColor="Black" FontAttributes="Bold"/>
+                                            </FlexLayout>
                                         </yummy:PancakeView>
 
                                         <buttons:SfButton FlexLayout.Grow="1"                                                                                                                                              
@@ -204,7 +224,7 @@
                                                           Grid.Row="0" 
                                                           Grid.Column="1"
                                                           VerticalOptions="Center"
-                                                          Margin="0,20,10,0"                                                        
+                                                          Margin="0,15,20,0"                                                        
                                                           BackgroundColor="#3db24b">
                                             <buttons:SfButton.Content>
                                                 <FlexLayout JustifyContent="Center" AlignItems="Center">
@@ -217,7 +237,7 @@
                                 <StackLayout  BackgroundColor="Transparent"
                                               Grid.Row="4" 
                                               Grid.Column="0">
-                                    <BoxView  BackgroundColor="Gray" VerticalOptions="Center" HeightRequest="1" Margin="20,10,20,5"/>
+                                    <BoxView  BackgroundColor="Gray" VerticalOptions="Center" HeightRequest="1" Margin="20,20,20,5"/>
 
                                 </StackLayout>
                                 <!--visa-->
@@ -226,15 +246,15 @@
                                               Grid.Column="0">
                                     <Grid>
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="0.8*" />
-                                            <ColumnDefinition Width="0.2*" />
+                                            <ColumnDefinition Width="0.75*" />
+                                            <ColumnDefinition Width="0.25*" />
                                         </Grid.ColumnDefinitions>
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="*" />
                                         </Grid.RowDefinitions>
 
                                         <FlexLayout Grid.Row="0"
-                                                    Margin="30,10,0,0"
+                                                    Margin="20,10,0,0"
                                                     AlignItems="Center"
                                                     Grid.Column="0">
                                             <Image Source="visa" />
@@ -245,7 +265,7 @@
                                                           WidthRequest="35"
                                                           CornerRadius="15"
                                                           Grid.Row="0" 
-                                                          Margin="0,20,10,0"
+                                                          Margin="0,15,20,0"
                                                           Grid.Column="1"
                                                           VerticalOptions="Center"
                                                           BackgroundColor="#3db24b">
@@ -279,20 +299,20 @@
                 </StackLayout>
             </Grid>
         </navigationdrawer:SfNavigationDrawer.DrawerHeaderView>
-        <!--List Data-->
+        <!--List Data SelectedItem="{Binding SelectPage}"-->
         <navigationdrawer:SfNavigationDrawer.DrawerContentView >
-            <ListView x:Name="listView" ItemSelected="listView_ItemSelected" ItemsSource="{Binding ListDrawer}" BackgroundColor="White">
-                <ListView.ItemTemplate>
+            <syncfusion:SfListView x:Name="listView"  ItemsSource="{Binding ListDrawer}" SelectedItem="{Binding SelectPage}" BackgroundColor="White" >
+                <syncfusion:SfListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <FlexLayout HeightRequest="40" Margin="15,0,0,0" AlignItems="Center" JustifyContent="Start" Direction="Row" >
-                                <controls:IconView Source="{Binding ImageDrawer}" Foreground="#3db24b" />
+                            <FlexLayout HeightRequest="40" Margin="15,0,0,0" AlignItems="Center"  JustifyContent="Start" Direction="Row" >
+                                <controls:IconView Source="{Binding ImageDrawer}" Foreground="DarkBlue" />
                                 <Label Text="{Binding TextDrawer}" Margin="5,0,0,0"/>
                             </FlexLayout>
                         </ViewCell>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </syncfusion:SfListView.ItemTemplate>
+            </syncfusion:SfListView>
         </navigationdrawer:SfNavigationDrawer.DrawerContentView>
     </navigationdrawer:SfNavigationDrawer>
 </ContentPage>

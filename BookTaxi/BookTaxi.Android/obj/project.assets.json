@@ -61,7 +61,7 @@
           "lib/netstandard2.0/Prism.Forms.dll": {}
         }
       },
-      "Syncfusion.Licensing/19.2.0.60": {
+      "Syncfusion.Licensing/19.2.0.62": {
         "type": "package",
         "compile": {
           "lib/MonoAndroid10.0/Syncfusion.Licensing.dll": {}
@@ -85,10 +85,10 @@
           "lib/MonoAndroid10.0/Syncfusion.Buttons.XForms.dll": {}
         }
       },
-      "Syncfusion.Xamarin.Core/19.2.0.60": {
+      "Syncfusion.Xamarin.Core/19.2.0.62": {
         "type": "package",
         "dependencies": {
-          "Syncfusion.Licensing": "19.2.0.60",
+          "Syncfusion.Licensing": "19.2.0.62",
           "Xamarin.Forms": "4.5.0.617"
         },
         "compile": {
@@ -116,6 +116,23 @@
         },
         "runtime": {
           "lib/MonoAndroid10.0/Syncfusion.GridCommon.Portable.dll": {}
+        }
+      },
+      "Syncfusion.Xamarin.SfBusyIndicator/19.2.0.62": {
+        "type": "package",
+        "dependencies": {
+          "Syncfusion.Xamarin.Core": "19.2.0.62",
+          "Xamarin.Forms": "4.5.0.617"
+        },
+        "compile": {
+          "lib/MonoAndroid10.0/Syncfusion.SfBusyIndicator.Android.dll": {},
+          "lib/MonoAndroid10.0/Syncfusion.SfBusyIndicator.XForms.Android.dll": {},
+          "lib/MonoAndroid10.0/Syncfusion.SfBusyIndicator.XForms.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10.0/Syncfusion.SfBusyIndicator.Android.dll": {},
+          "lib/MonoAndroid10.0/Syncfusion.SfBusyIndicator.XForms.Android.dll": {},
+          "lib/MonoAndroid10.0/Syncfusion.SfBusyIndicator.XForms.dll": {}
         }
       },
       "Syncfusion.Xamarin.SfComboBox/19.2.0.59": {
@@ -1913,6 +1930,7 @@
         "dependencies": {
           "Prism.DryIoc.Forms": "8.0.0.1909",
           "Syncfusion.Xamarin.Buttons": "19.2.0.60",
+          "Syncfusion.Xamarin.SfBusyIndicator": "19.2.0.62",
           "Syncfusion.Xamarin.SfComboBox": "19.2.0.59",
           "Syncfusion.Xamarin.SfListView": "19.2.0.59",
           "Syncfusion.Xamarin.SfNavigationDrawer": "19.2.0.60",
@@ -2035,10 +2053,10 @@
         "prism.forms.nuspec"
       ]
     },
-    "Syncfusion.Licensing/19.2.0.60": {
-      "sha512": "u0iCMMOsOMVgiPZCqE6AVxcl+dSXzlRxe9a/6qK556lPu4gTqzXVkUzp8zNitydIWimiFextL3gAHCmoGPfLig==",
+    "Syncfusion.Licensing/19.2.0.62": {
+      "sha512": "usYaKBxMoBfliqvNM/KbyYDNRDZ8MHShdgDX8p9GzYjmdnR/UPgKc7nIeVXgwcHru9wSXs7q+abE5zqgsoytpA==",
       "type": "package",
-      "path": "syncfusion.licensing/19.2.0.60",
+      "path": "syncfusion.licensing/19.2.0.62",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2060,7 +2078,7 @@
         "lib/netstandard2.0/Syncfusion.Licensing.dll",
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
         "lib/uap10.0/Syncfusion.Licensing.dll",
-        "syncfusion.licensing.19.2.0.60.nupkg.sha512",
+        "syncfusion.licensing.19.2.0.62.nupkg.sha512",
         "syncfusion.licensing.nuspec"
       ]
     },
@@ -2098,10 +2116,10 @@
         "syncfusion.xamarin.buttons.nuspec"
       ]
     },
-    "Syncfusion.Xamarin.Core/19.2.0.60": {
-      "sha512": "b9bMe8dAeiZdQTLoNuqmen0v2eDwKDUKUM2IWpTDZp3fzmpDHUuTbiYdll6o6gxjnrZHEoAXCSt3I1krxdw+mQ==",
+    "Syncfusion.Xamarin.Core/19.2.0.62": {
+      "sha512": "3cvdFfhkgqwDg6IgDzGM5Hx8m49wt9luFvHcWSqICIG/s+HXvjkQfoQmRTum6Mi4mxd7nrB+U1yx3dADQm8WsA==",
       "type": "package",
-      "path": "syncfusion.xamarin.core/19.2.0.60",
+      "path": "syncfusion.xamarin.core/19.2.0.62",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2129,7 +2147,7 @@
         "lib/uap10.0/Syncfusion.Core.XForms.UWP/TILRenderer/ToggleIcons/ToggleVisibleIcon.xaml",
         "lib/uap10.0/Syncfusion.Core.XForms.dll",
         "lib/uap10.0/Syncfusion.Core.XForms.xml",
-        "syncfusion.xamarin.core.19.2.0.60.nupkg.sha512",
+        "syncfusion.xamarin.core.19.2.0.62.nupkg.sha512",
         "syncfusion.xamarin.core.nuspec"
       ]
     },
@@ -2179,6 +2197,40 @@
         "lib/uap10.0/Syncfusion.GridCommon.Portable.dll",
         "syncfusion.xamarin.gridcommon.19.2.0.59.nupkg.sha512",
         "syncfusion.xamarin.gridcommon.nuspec"
+      ]
+    },
+    "Syncfusion.Xamarin.SfBusyIndicator/19.2.0.62": {
+      "sha512": "qwVenDNjkJ1S3dr026JPdJGVEnn2VTaDwQktBj2DMdMEx/QtqQ57owYud1jfWOTPIlzRpJ8jYJ2RM3EoD2f5Jg==",
+      "type": "package",
+      "path": "syncfusion.xamarin.sfbusyindicator/19.2.0.62",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10.0/Syncfusion.SfBusyIndicator.Android.dll",
+        "lib/MonoAndroid10.0/Syncfusion.SfBusyIndicator.Android.xml",
+        "lib/MonoAndroid10.0/Syncfusion.SfBusyIndicator.XForms.Android.dll",
+        "lib/MonoAndroid10.0/Syncfusion.SfBusyIndicator.XForms.dll",
+        "lib/MonoAndroid10.0/Syncfusion.SfBusyIndicator.XForms.xml",
+        "lib/MonoAndroid90/Syncfusion.SfBusyIndicator.Android.dll",
+        "lib/MonoAndroid90/Syncfusion.SfBusyIndicator.Android.xml",
+        "lib/MonoAndroid90/Syncfusion.SfBusyIndicator.XForms.Android.dll",
+        "lib/MonoAndroid90/Syncfusion.SfBusyIndicator.XForms.dll",
+        "lib/MonoAndroid90/Syncfusion.SfBusyIndicator.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.XForms.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.XForms.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.XForms.xml",
+        "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.iOS.dll",
+        "lib/Xamarin.iOS10/Syncfusion.SfBusyIndicator.iOS.xml",
+        "lib/netstandard2.0/Syncfusion.SfBusyIndicator.XForms.dll",
+        "lib/netstandard2.0/Syncfusion.SfBusyIndicator.XForms.xml",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfBusyIndicator.XForms.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.SfBusyIndicator.XForms.xml",
+        "lib/uap10.0/Syncfusion.SfBusyIndicator.XForms.UWP.XML",
+        "lib/uap10.0/Syncfusion.SfBusyIndicator.XForms.UWP.dll",
+        "lib/uap10.0/Syncfusion.SfBusyIndicator.XForms.dll",
+        "lib/uap10.0/Syncfusion.SfBusyIndicator.XForms.xml",
+        "syncfusion.xamarin.sfbusyindicator.19.2.0.62.nupkg.sha512",
+        "syncfusion.xamarin.sfbusyindicator.nuspec"
       ]
     },
     "Syncfusion.Xamarin.SfComboBox/19.2.0.59": {
@@ -4372,6 +4424,7 @@
       "BookTaxi >= 1.0.0",
       "Plugin.CurrentActivity >= 2.1.0.4",
       "Prism.DryIoc.Forms >= 8.0.0.1909",
+      "Syncfusion.Xamarin.SfBusyIndicator >= 19.2.0.62",
       "Xamarin.Android.Support.Compat >= 28.0.0.3",
       "Xamarin.Android.Support.Core.UI >= 28.0.0.3",
       "Xamarin.Android.Support.Core.Utils >= 28.0.0.3",
@@ -4438,6 +4491,10 @@
           "Prism.DryIoc.Forms": {
             "target": "Package",
             "version": "[8.0.0.1909, )"
+          },
+          "Syncfusion.Xamarin.SfBusyIndicator": {
+            "target": "Package",
+            "version": "[19.2.0.62, )"
           },
           "Xamarin.Android.Support.Compat": {
             "target": "Package",

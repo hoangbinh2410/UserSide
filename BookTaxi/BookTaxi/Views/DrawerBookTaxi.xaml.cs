@@ -74,27 +74,38 @@ namespace BookTaxi.Views
             navigationDrawer.ToggleDrawer();
         }
 
-        private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            if (e.SelectedItem.ToString() == "Home")
-            {
-                await Navigation.PushAsync(new DrawerBookTaxi());
-            }
-            else if (e.SelectedItem.ToString() == "Ride History")
-            {
-                await Navigation.PushAsync(new RideHistory());
-            }
-            else if (e.SelectedItem.ToString() == "Noticfications")
-            {
-                await Navigation.PushAsync(new Notifications());
-            }
-            else if (e.SelectedItem.ToString() == "Settings")
-            {
-                await Navigation.PushAsync(new AccountSetting());
-            }
+        //private async void listView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        //{
+        //    if (e.SelectedItem.ToString() == "Home")
+        //    {
+        //        await Navigation.PushAsync(new DrawerBookTaxi());
+        //    }
+        //    else if (e.SelectedItem.ToString() == "Ride History")
+        //    {
+        //        await Navigation.PushAsync(new RideHistory());
+        //    }
+        //    else if (e.SelectedItem.ToString() == "Noticfications")
+        //    {
+        //        await Navigation.PushAsync(new Notifications());
+        //    }
+        //    else if (e.SelectedItem.ToString() == "Settings")
+        //    {
+        //        await Navigation.PushAsync(new AccountSetting());
+        //    }
 
-            navigationDrawer.ToggleDrawer();
+        //    navigationDrawer.ToggleDrawer();
 
-        }
+        //}
+
+        //private void listView_ItemTapped(object sender, ItemTappedEventArgs e)
+        //{
+        //    var myselecteditem = e.Item as DrawerBookTaxi;
+        //    switch (myselecteditem.Id)
+        //    {
+        //        case 1:
+        //            await Navigation.PushAsync(new AccountSetting());
+        //            break;
+        //    }
+        //}
     }
 }

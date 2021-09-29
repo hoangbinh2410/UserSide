@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[19.2.0.60, )"
             },
+            "Syncfusion.Xamarin.SfBusyIndicator": {
+              "target": "Package",
+              "version": "[19.2.0.62, )"
+            },
             "Syncfusion.Xamarin.SfComboBox": {
               "target": "Package",
               "version": "[19.2.0.59, )"

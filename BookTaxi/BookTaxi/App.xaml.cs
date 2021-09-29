@@ -18,8 +18,8 @@ namespace BookTaxi
         protected override async void OnInitialized()
         {
             InitializeComponent();
-
-            await NavigationService.NavigateAsync("/DrawerBookTaxi");
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NDY1MDY5QDMxMzkyZTMyMmUzMGRhbHY5MHVhQVhUeEZBR2E5dTVWSDdtVFpXaG1jT0xiTzNLQ2VUQTBBMEk9");
+            await NavigationService.NavigateAsync("/LoginBookTaxi");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)

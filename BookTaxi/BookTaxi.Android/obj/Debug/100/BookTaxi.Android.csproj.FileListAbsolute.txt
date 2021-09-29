@@ -848,3 +848,4 @@ D:\Demo\UserSide\BookTaxi\BookTaxi.Android\obj\Debug\100\androidx\proguard\a4cf7
 D:\Demo\UserSide\BookTaxi\BookTaxi.Android\obj\Debug\100\androidx\proguard\ce899ab4-6489-426f-b1f1-0cb40626556f.txt
 D:\Demo\UserSide\BookTaxi\BookTaxi.Android\obj\Debug\100\androidx\proguard\d26b515d-f346-4736-8246-343e3329dd2a.cfg
 D:\Demo\UserSide\BookTaxi\BookTaxi.Android\obj\Debug\100\androidx\proguard\d6c1fd9a-7682-4882-9ab5-dc6a6fd27f4f.txt
+D:\Demo\UserSide\BookTaxi\BookTaxi.Android\obj\Debug\100\res\drawable\flag.png

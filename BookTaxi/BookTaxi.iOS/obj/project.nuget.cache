@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8YJrQlYtyHPZCHCJTI/ytP+WATJGWNhEIw9huyMc3teYiJicXjADuJwi56Z2ZjRnfzlsbpUb1tIPwBcj+vX1Ew==",
+  "dgSpecHash": "Hyh8KUKC4pdV7+tNM17kWm0cs/WbF1tJmsEtcrRg6E7bwl7lxrhI/nQon21ecoxuxwvQCBGYuXpdDaGMZzEiiA==",
   "success": true,
   "projectFilePath": "D:\\Demo\\UserSide\\BookTaxi\\BookTaxi.iOS\\BookTaxi.iOS.csproj",
   "expectedPackageFiles": [
@@ -8,11 +8,12 @@
     "C:\\Users\\ADMIN\\.nuget\\packages\\prism.core\\8.0.0.1909\\prism.core.8.0.0.1909.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\prism.dryioc.forms\\8.0.0.1909\\prism.dryioc.forms.8.0.0.1909.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\prism.forms\\8.0.0.1909\\prism.forms.8.0.0.1909.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\syncfusion.licensing\\19.2.0.60\\syncfusion.licensing.19.2.0.60.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\syncfusion.licensing\\19.2.0.62\\syncfusion.licensing.19.2.0.62.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\syncfusion.xamarin.buttons\\19.2.0.60\\syncfusion.xamarin.buttons.19.2.0.60.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\syncfusion.xamarin.core\\19.2.0.60\\syncfusion.xamarin.core.19.2.0.60.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\syncfusion.xamarin.core\\19.2.0.62\\syncfusion.xamarin.core.19.2.0.62.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\syncfusion.xamarin.datasource\\19.2.0.59\\syncfusion.xamarin.datasource.19.2.0.59.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\syncfusion.xamarin.gridcommon\\19.2.0.59\\syncfusion.xamarin.gridcommon.19.2.0.59.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\syncfusion.xamarin.sfbusyindicator\\19.2.0.62\\syncfusion.xamarin.sfbusyindicator.19.2.0.62.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\syncfusion.xamarin.sfcombobox\\19.2.0.59\\syncfusion.xamarin.sfcombobox.19.2.0.59.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\syncfusion.xamarin.sflistview\\19.2.0.59\\syncfusion.xamarin.sflistview.19.2.0.59.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\syncfusion.xamarin.sfnavigationdrawer\\19.2.0.60\\syncfusion.xamarin.sfnavigationdrawer.19.2.0.60.nupkg.sha512",
